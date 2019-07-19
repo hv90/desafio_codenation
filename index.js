@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 
-let token = '1068b302fe3d9878379d11c23345093112dc2d29';//entre seu token aqui
+let token = '';//entre seu token aqui
 
 https.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token='+ token, (resp) => {
   let data = '';
