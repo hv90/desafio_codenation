@@ -16,6 +16,7 @@ Salvar o conteúdo do JSON em um arquivo com o nome answer.json, que irá usar n
 
 const https = require('https');
 const fs = require('fs');
+const fileName = './answer.json';
 
 let token = '';//entre seu token aqui
 
@@ -30,7 +31,7 @@ https.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token='+
   // imprimindo resultados
   resp.on('end', () => {
     console.log(data);
-    fs.writeFile('answer.json', data, (err) => {
+    fs.writeFile(fileName, data, (err) => {
         if(err) throw err;
       });
   });
